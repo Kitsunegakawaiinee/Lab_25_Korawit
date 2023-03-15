@@ -12,7 +12,8 @@ void printList(list<string> s){
 	cout << "\n";	
 }
 
-int main(){
+int main()
+{
 	
 	list<string> line_up;
 	list<string>::iterator loc;
@@ -24,7 +25,23 @@ int main(){
 	line_up.insert(loc,"Oscar");
 	
 	//Write your code here
-	
+	line_up.push_back("Luffy");
+	line_up.push_back("Sanji");
+	line_up.push_back("Nami");
+	for(int i = 0;i<2;i++){
+		line_up.pop_front();
+	}
+	loc = find(line_up.begin(),line_up.end(),"Sanji");
+	line_up.insert(loc,"Narutu");
+	line_up.push_front("Paryath");
+	loc = find(line_up.begin(),line_up.end(),"Bob");
+	line_up.insert(loc,"Tony");
+	loc = find(line_up.begin(),line_up.end(),"Bob");
+	line_up.erase(loc);
+	for(int i = 0;i<3;i++){
+		line_up.pop_front();
+	}
+
 	printList(line_up);
 		
 	return 0;
